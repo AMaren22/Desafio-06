@@ -1,0 +1,18 @@
+@mixin display-flex {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+@mixin degrade ($deg) {
+    transform: rotate($deg);
+    background: -webkit-linear-gradient(
+      -90deg,
+      $degrade-color-one,
+      $degrade-color-two
+    );
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+
+    
+}

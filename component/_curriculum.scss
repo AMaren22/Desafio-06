@@ -1,0 +1,23 @@
+@import "../base/lista";
+@import "../base/variables";
+@import "../base/mixin";
+
+.curriculum-title {
+  color: nth($colores, 2);
+  text-align: left;
+  padding: 0 5vw;
+  font-size: 7vh;
+  font-weight: 300;
+  text-decoration: underline;
+}
+.curriculum-ul {
+  padding: 3vh 10vw;
+  text-align: justify;
+  height: auto;
+  color: nth($colores, 2);
+  li {
+    list-style: disc;
+    padding-top: 2vh;
+    color: nth($colores, 2);
+  }
+}
