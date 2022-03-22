@@ -26,6 +26,7 @@
   display: flex;
   justify-content: space-between;
   text-decoration: none;
+  background-color: nth($colores, 1);
   &:hover {
     transform: scale(1.05);
     transition: 1s;

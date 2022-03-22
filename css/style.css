@@ -23,6 +23,7 @@
   display: flex;
   justify-content: space-between;
   text-decoration: none;
+  background-color: black;
 }
 .main-a:hover {
   transform: scale(1.05);
