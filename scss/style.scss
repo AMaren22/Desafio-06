@@ -18,7 +18,7 @@ body {
   font-family: "Nunito", sans-serif;
   font-family: "Poppins", sans-serif;
 }
-h1{
+h1 {
   display: none;
 }
 li {
@@ -44,23 +44,32 @@ header {
       background-color: nth($colores, 1);
       width: map-get($display, w);
       height: 5vh;
+      font-size: 2vw;
       align-items: map-get($display, c);
       justify-content: map-get($display, s-e);
+
       li {
-        display: map-get($display, d-f);
-        align-items: map-get($display, c);
-        padding: 0 20px;
-        font-size: 2vw;
-        background-color: nth($colores, 1);
-        height: 5vh;
-        width: auto;
-        border-radius: $radius;
-        &:hover {
-          background-color: $color-secundario;
-          transition: 0.5s;
+        > a {
+          display: block;
+          position: relative;
+          padding: 0;
+          text-decoration: none;
+          color: white;
         }
-        a {
-          color: nth($colores, 2);
+        .efecto::before {
+          content: "";
+          position: absolute;
+          display: block;
+          left: 0;
+          bottom: 0;
+          width: 100%;
+          height: 2px;
+          transform: scaleX(0);
+          transition: transform 0.3s ease;
+          background-color: white;
+        }
+        .efecto:hover::before {
+          transform: scaleX(1);
         }
       }
     }
