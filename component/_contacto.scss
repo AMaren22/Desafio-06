@@ -11,12 +11,28 @@
   font-weight: 300;
   text-decoration: underline;
 }
-.contacto-text {
-  padding: 3vh 10vw 3vh 12vw;
-  text-align: justify;
+div.redes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3vh 0 3vh 12vw;
   height: auto;
-  color: nth($colores, 2);
+  width: max-content;
+
+  a {
+    color: nth($colores, 2);
+    padding: 3vh;
+    border-radius: $radius;
+    transition: 0.5s;
+    font-weight: 500;
+    font-size: 2.5vh;
+
+    &:hover {
+      background-color: $color-secundario;
+    }
+  }
 }
+
 .form-containter {
   label {
     display: flex;

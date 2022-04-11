@@ -11,7 +11,7 @@
   text-decoration: underline;
 }
 .curriculum-ul {
-  padding: 3vh 10vw;
+  padding: 3vh 10vw 3vw 10vw;
   text-align: justify;
   height: auto;
   color: nth($colores, 2);
@@ -19,5 +19,13 @@
     list-style: disc;
     padding-top: 2vh;
     color: nth($colores, 2);
+    p {
+      font-weight: 500;
+      font-size: 3vh;
+
+      span {
+        font-weight: lighter;
+      }
+    }
   }
 }

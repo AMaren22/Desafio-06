@@ -8,8 +8,7 @@
   height: auto;
   @include display-flex;
   flex-direction: column;
-  
-  
+
   h3 {
     color: nth($colores, 2);
     padding-bottom: 3vh;

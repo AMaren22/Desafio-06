@@ -330,7 +330,7 @@
 }
 
 .curriculum-ul {
-  padding: 3vh 10vw;
+  padding: 3vh 10vw 3vw 10vw;
   text-align: justify;
   height: auto;
   color: #fff;
@@ -339,6 +339,13 @@
   list-style: disc;
   padding-top: 2vh;
   color: #fff;
+}
+.curriculum-ul li p {
+  font-weight: 500;
+  font-size: 3vh;
+}
+.curriculum-ul li p span {
+  font-weight: lighter;
 }
 
 .contacto-title {
@@ -351,11 +358,24 @@
   text-decoration: underline;
 }
 
-.contacto-text {
-  padding: 3vh 10vw 3vh 12vw;
-  text-align: justify;
+div.redes {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 3vh 0 3vh 12vw;
   height: auto;
+  width: max-content;
+}
+div.redes a {
   color: #fff;
+  padding: 3vh;
+  border-radius: 6px;
+  transition: 0.5s;
+  font-weight: 500;
+  font-size: 2.5vh;
+}
+div.redes a:hover {
+  background-color: #1b1b1b;
 }
 
 .form-containter label {
@@ -466,7 +486,18 @@ header nav ul li > a {
   position: relative;
   padding: 0;
   text-decoration: none;
-  color: white;
+  color: #fff;
+}
+header nav ul li #active::before {
+  content: "";
+  position: absolute;
+  display: block;
+  left: 0;
+  bottom: 0;
+  width: 100%;
+  height: 2px;
+  transform: scaleX(1);
+  background: -webkit-linear-gradient(0deg, #80eef7, #51a6b1);
 }
 header nav ul li .efecto::before {
   content: "";
@@ -478,7 +509,7 @@ header nav ul li .efecto::before {
   height: 2px;
   transform: scaleX(0);
   transition: transform 0.3s ease;
-  background-color: white;
+  background-color: #fff;
 }
 header nav ul li .efecto:hover::before {
   transform: scaleX(1);
