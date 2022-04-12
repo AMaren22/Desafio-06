@@ -27,10 +27,13 @@ li {
 a {
   text-decoration: none;
 }
+.show{
+  display: flex !important;
+}
 header {
   width: map-get($display, w);
   height: 40vh;
-  div {
+  div.container-header-image {
     background-image: url(../images/Logo.jpeg);
     background-size: 100% 400%;
     background-repeat: no-repeat;
@@ -39,6 +42,40 @@ header {
     height: 40vh;
   }
   nav {
+    div.mobile{
+      display: none;
+      flex-direction: column;
+      background-color: black;
+      >#hmenu{
+        border: none;
+        background-color: transparent;
+        width: 50px;
+        height: 50px;
+        border-radius: $radius;
+        cursor: pointer;
+        >span.material-icons{
+          @include degrade(0deg)
+        }
+      }
+      div.links{
+        display: none;
+        flex-direction: column;
+        justify-content: center;
+        
+        >a{
+          background-color: black;
+          padding: 2vh 0 2vh 2vh;
+          color: white;
+          &:hover{
+            background-color: $color-secundario;
+          }
+          &#active-m{
+            background-color: $color-secundario;
+          }
+
+        }
+      }
+    }
     ul {
       display: map-get($display, d-f);
       background-color: nth($colores, 1);
@@ -125,24 +162,23 @@ footer {
 /*Mobile*/
 @media (max-width: 480px) {
   .container-header {
+    div.container-header-image {
+      background-size: 100% 150%;
+    }
     height: auto;
   }
 
-  .container-header-image {
-    background-size: 100% 150%;
-  }
+  
 
-  .container-header nav ul {
-    flex-direction: column;
-    height: auto;
-    align-items: map-get($display, c);
-    justify-content: map-get($display, c);
+  .container-header nav{
+    div.mobile{
+      display: flex;
+    }
+    ul {
+    display: none;
   }
-  .container-header nav ul li {
-    margin: 7px 0;
-    font-size: 3.5vh;
-    width: auto;
   }
+  
 
   .main-title {
     font-size: 6vh;
@@ -151,23 +187,21 @@ footer {
 /*Tablet*/
 @media (min-width: 481px) and (max-width: 900px) {
   .container-header {
+    div.container-header-image {
+      background-size: 100% 250%;
+    }
     height: auto;
   }
 
-  .container-header-image {
-    background-size: 100% 250%;
-  }
+  
 
-  .container-header nav ul {
-    flex-direction: column;
-    height: auto;
-    align-items: map-get($display, c);
-    justify-content: map-get($display, c);
+  .container-header nav{
+    div.mobile{
+      display: flex;
+    }
+    ul {
+    display: none;
   }
-  .container-header nav ul li {
-    margin: 10px 0;
-    font-size: 4.5vh;
-    width: auto;
   }
 
   .main-title {
